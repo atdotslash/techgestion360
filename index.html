@@ -3,48 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechGestión360</title>
+  <title>TechGestión360 - Panel Principal</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .boton-simulacion {
+      padding: 0.7rem 1.2rem;
+      background-color: #009688;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton-simulacion:hover {
+      background-color: #00796b;
+    }
+
+    #actividad-extra {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background-color: #e0f2f1;
+      border-radius: 5px;
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>TechGestión360</h1>
-    <p>El sistema que tu comercio ya necesita</p>
-    <a href="#contacto" class="cta">Solicitar presupuesto</a>
+    <h1>Bienvenido a TechGestión360</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="reportes.html">Reportes</a></li>
+        <li><a href="configuracion.html">Configuración</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="beneficios">
-    <h2>¿Qué hace TechGestión360?</h2>
-    <ul>
-      <li>Automatiza publicaciones en WhatsApp e Instagram 📲</li>
-      <li>Control de stock en tiempo real 📦</li>
-      <li>Panel de ventas y estadísticas 📈</li>
-      <li>Catálogo digital para clientes en el local 📱</li>
-      <li>Registro de ventas y control de caja diario 💵</li>
-    </ul>
-  </section>
-
-  <section id="testimonio">
-    <blockquote>
-      “Desde que usamos TechGestión360 sabemos qué vendemos, cuándo y a quién. Y todo en 2 clics.”
-    </blockquote>
-  </section>
-
-  <section id="contacto">
-    <h2>¿Querés conocer más?</h2>
-    <p>Completá este formulario o escribinos directamente por WhatsApp.</p>
-    <form>
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu correo electrónico" required>
-      <textarea placeholder="Tu consulta" required></textarea>
-      <button type="submit">Enviar consulta</button>
-    </form>
-  </section>
+  <main>
+    <section class="resumen">
+      <h2>Resumen de Actividad</h2>
+      <p>Hoy se registraron <strong>43 ventas</strong>. Quedan <strong>127 productos</strong> en stock.</p>
+      <p>Próxima publicación programada en <strong>Instagram</strong> para las <strong>18:00 hs</strong>.</p>
+      <button class="boton-simulacion" onclick="mostrarActividadExtra()">Ver más detalles</button>
+      <div id="actividad-extra">
+        <p><strong>Última venta:</strong> Taladro Black+Decker - $62.000</p>
+        <p><strong>Producto más vendido hoy:</strong> Termo Stanley 1L</p>
+        <p><strong>Promedio por ticket:</strong> $38.750</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 TechGestión360 - Desarrollado por Edgardo Sandoval</p>
+    <p>&copy; 2025 TechGestión360 - Panel del sistema</p>
   </footer>
 
-  <script src="main.js"></script>
+  <script>
+    function mostrarActividadExtra() {
+      const extra = document.getElementById('actividad-extra');
+      extra.style.display = extra.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>

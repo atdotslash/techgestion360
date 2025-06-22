@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechGestión360 - Reportes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>TechGestión360</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="reportes.html">Reportes</a></li>
+        <li><a href="configuracion.html">Configuración</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Reporte de Ventas</h2>
+      <canvas id="ventasChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 TechGestión360 - Reportes</p>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    const ctx = document.getElementById('ventasChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'],
+        datasets: [{
+          label: 'Ventas ($)',
+          data: [125000, 98000, 142000, 88000, 163000],
+          backgroundColor: '#009688'
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
