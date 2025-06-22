@@ -1,0 +1,93 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f8f9fa, #e0f7fa);
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #00bcd4, #009688);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #e65100;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+section h2 {
+  color: #00796b;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid #00acc1;
+  padding-left: 1rem;
+  color: #555;
+  background-color: #f1f8e9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eeeeee;
+  font-size: 0.9rem;
+}
