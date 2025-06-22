@@ -31,7 +31,15 @@
           <tr><td>Termo Stanley</td><td>25</td><td>$41.000</td></tr>
         </tbody>
       </table>
-      <button onclick="alert('Formulario de carga en desarrollo')">Agregar producto</button>
+      <form onsubmit="event.preventDefault(); alert('Producto agregado (simulado)')">
+        <input type="text" placeholder="Nombre del producto" required>
+        <input type="number" placeholder="Stock inicial" required>
+        <input type="number" placeholder="Precio" required>
+        <label>Subir foto del producto:
+          <input type="file" accept="image/*">
+        </label>
+        <button type="submit">Agregar producto</button>
+      </form>
     </section>
   </main>
   <footer>

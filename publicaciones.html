@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechGestión360 - Publicaciones</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .logos {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .logos img {
+      width: 40px;
+      height: auto;
+    }
+    .calendar {
+      margin-top: 2rem;
+    }
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .calendar th, .calendar td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .calendar th {
+      background-color: #009688;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -19,18 +46,50 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <section>
       <h2>Redacción de Publicaciones</h2>
+      <div class="logos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </div>
       <form onsubmit="event.preventDefault(); alert('Publicación simulada')">
-        <textarea placeholder="Escribí tu mensaje para Instagram o WhatsApp..." required></textarea>
-        <button type="submit">Publicar ahora</button>
+        <label>Seleccionar red:
+          <select>
+            <option value="whatsapp">WhatsApp</option>
+            <option value="instagram">Instagram</option>
+          </select>
+        </label>
+        <textarea placeholder="Escribí tu mensaje para la publicación..." required></textarea>
+        <label>Subir imagen o video:
+          <input type="file" accept="image/*,video/*">
+        </label>
+        <label>Programar fecha y hora:
+          <input type="datetime-local">
+        </label>
+        <button type="submit">Programar publicación</button>
       </form>
     </section>
+
+    <section class="calendar">
+      <h2>Publicaciones Programadas</h2>
+      <table>
+        <thead>
+          <tr><th>Fecha</th><th>Hora</th><th>Red</th><th>Contenido</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>24/06/2025</td><td>18:00</td><td>Instagram</td><td>Ofertas en herramientas</td></tr>
+          <tr><td>25/06/2025</td><td>10:30</td><td>WhatsApp</td><td>Nuevo ingreso de termos</td></tr>
+        </tbody>
+      </table>
+    </section>
   </main>
+
   <footer>
     <p>&copy; 2025 TechGestión360 - Publicaciones</p>
   </footer>
+
   <script src="main.js"></script>
 </body>
 </html>
