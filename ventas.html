@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechGestión360 - Ventas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TechGestión360</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="ventas.html">Ventas</a></li>
+        <li><a href="reportes.html">Reportes</a></li>
+        <li><a href="configuracion.html">Configuración</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Registrar Venta</h2>
+      <form onsubmit="event.preventDefault(); alert('Venta registrada (simulada)')">
+        <label>Producto:
+          <select>
+            <option>Taladro</option>
+            <option>Termo Stanley</option>
+            <option>Celular Samsung</option>
+          </select>
+        </label>
+        <label>Cantidad:
+          <input type="number" value="1" min="1">
+        </label>
+        <button type="submit">Registrar venta</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Últimas Ventas</h2>
+      <table>
+        <thead><tr><th>Producto</th><th>Cantidad</th><th>Precio</th><th>Fecha</th></tr></thead>
+        <tbody>
+          <tr><td>Taladro</td><td>1</td><td>$62.000</td><td>22/06/2025</td></tr>
+          <tr><td>Termo Stanley</td><td>2</td><td>$82.000</td><td>22/06/2025</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 TechGestión360 - Ventas</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
